@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0-0.1
+      author: e.karachik
+      comment: create table with products info
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            encoding: utf8
+            path: sql/init_products.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 1.0-0.2
+      author: e.karachik
+      comment: create table with reviews
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            encoding: utf8
+            path: sql/init_reviews.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 1.0-0.3
+      author: e.karachik
+      comment: create table with additional reviews media files
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            encoding: utf8
+            path: sql/init_media.sql
+            relativeToChangelogFile: true
